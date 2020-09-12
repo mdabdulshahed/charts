@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="Chart.min.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <canvas
+      id="myChart1"
+      style="padding-top: 50px"
+      width="200"
+      height="100"
+    ></canvas>
+    <canvas
+      id="myChart2"
+      style="padding-top: 50px"
+      width="200"
+      height="100"
+    ></canvas>
+    <canvas
+      id="myChart3"
+      style="padding-top: 50px"
+      width="200"
+      height="100"
+    ></canvas>
+
+    <script>
+      var pie1 = document.getElementById("myChart1").getContext("2d");
+      var bar1 = document.getElementById("myChart2").getContext("2d");
+      var line = document.getElementById("myChart3").getContext("2d");
+
+      var chart1 = new Chart(pie1, {
+        type: "pie",
+
+        data: {
+          labels: [
+            "January",
+            "February",
+            "March",
+            "April",
+            "May",
+            "June",
+            "July",
+          ],
+          datasets: [
+            {
+              label: "My First dataset",
+              backgroundColor: "#7395fa",
+              data: [4, 10, 5, 2, 20, 30, 49],
+              hoverBorderWidth: 2,
+              borderColor: "#000",
+            },
+          ],
+        },
+      });
+      var chart2 = new Chart(bar1, {
+        type: "bar",
+
+        data: {
+          labels: [
+            "January",
+            "February",
+            "March",
+            "April",
+            "May",
+            "June",
+            "July",
+          ],
+          datasets: [
+            {
+              label: "My First dataset",
+              backgroundColor: "#7395fa",
+              data: [4, 10, 5, 2, 20, 30, 49],
+              hoverBorderWidth: 2,
+              borderColor: "#000",
+            },
+          ],
+        },
+      });
+      var chart3 = new Chart(line, {
+        type: "line",
+
+        data: {
+          labels: [
+            "January",
+            "February",
+            "March",
+            "April",
+            "May",
+            "June",
+            "July",
+          ],
+          datasets: [
+            {
+              label: "My First dataset",
+              backgroundColor: "#7395fa",
+              data: [4, 10, 5, 2, 20, 30, 49],
+              hoverBorderWidth: 2,
+              borderColor: "#000",
+            },
+          ],
+        },
+      });
+    </script>
+  </body>
+</html>
